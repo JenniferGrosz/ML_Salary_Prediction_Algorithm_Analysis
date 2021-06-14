@@ -1,4 +1,4 @@
 # SalaryPrediction
 Salary Prediction System: A Comparative Analysis to Determine the Best ML Model for Predicting Job Salary
 
-[embed]https://github.com/JenniferGrosz/SalaryPrediction/blob/a8c0886a5c6f32bffa868ec0aa345f82d2f73840/Salary_prediction_system_WriteUp_JG.pdf[/embed]
+<embed src="/Salary_prediction_system_WriteUp_JG.pdf" type="application/pdf">
