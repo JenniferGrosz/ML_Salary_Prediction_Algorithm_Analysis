@@ -23,12 +23,14 @@ identifying the best salary prediction algorithm by using person-level data betw
 extracted from the Integrated Public Use Microdata Series - Current Population Survey (IPUMS CPA).
 The prediction algorithms used for this analysis take certain key features as inputs and produce the most
 accurate salary predictions based on the previous data each model was trained with.
+
 **Motivations:** 
 The inspiration behind this paper stems from personal frustrations experienced stemming
 from the lack of information about expected salary figures provided to prospective applicants during the
 online job search and application process. Additionally, this analysis is being utilized as an opportunity to
 further explore and apply machine learning algorithms to develop a deeper personal understanding of
 learned algorithms and the process for evaluating their performance results.
+
 **Literature Review:** 
 The methods implemented in this analysis were drawn from several sources where
 similar works of such projection systems have been studied. U. Bansal et all published an article
@@ -77,6 +79,7 @@ with age. Eliminating highly correlated features can help reduce overfitting bec
 means there is less opportunity for the models to make decisions based on noise. The features used from
 the data set are region_name, age, sex, education, and Position. The target variable for the models to
 predict is earnings. (See Appendix A)
+
 **Tuning:**
 For each model, a performance evaluation has been conducted to determine the optimal input
 parameters for each algorithm. Tuning of the models included running the Polynomial regression
@@ -84,10 +87,12 @@ algorithm with ordinal encoding of categorical features with the degree paramete
 and 7. K-Neighbor Regressor algorithms were ran with the n_neighbors parameter equal to 1, 2, 3, 4, 5, 6,
 7, 8, 9, 10, 20, 30, 50, 100, 200, and 300. Finally, Random Forest Regressor algorithms were ran with the
 n_estimator parameter equal to 10, 50, 100, 150, 200, 250, and 300.
+
 **Training:** 
 Once the optimal input parameters for each model were identified the resulting optimal
 algorithms were trained using a 10-fold cross validation. After reviewing the results of the cross
 validation training the resulting 5 best performing versions of each model are selected for the final test.
+
 **Testing:** 
 The final test is conducted using the 20% test data that was originally separated from the
 complete data set. This test identifies which machine learning algorithm provides the most accurate salary
@@ -101,8 +106,11 @@ Regressor models performed best when n_neighbors = 8 and n_neighbors = 10, and t
 Regressor models performed best when n_estimators = 250 both methods of encoding categorical
 features. These input parameter settings resulted in the best performance from each machine learning
 model. (See Appendix B)
+
 **Training Results:** The table below shows the training results for each model.
+
 <img width="706" alt="1" src="https://user-images.githubusercontent.com/62961139/140666239-91a9b312-9d4e-4ab7-89a4-6fe94c64982c.png">
+
 All models, except for the Random Forest Regressor, perform best when the dummy encoded categorical
 features data set is used. (See Appendix C)
 
@@ -110,9 +118,12 @@ features data set is used. (See Appendix C)
 **Final Test Results:** 
 The table below shows the results for each top-performing version of the models,
 using test data which they have not been trained on. (See Appendix D)
+
 <img width="842" alt="2" src="https://user-images.githubusercontent.com/62961139/140666278-08c22694-da8a-4db1-a37d-5d6f30416b71.png">
+
 Plotted below is the density distribution of Actual (blue) and Random Forest predicted (pink) earnings
 values from the final test.
+
 <img width="847" alt="3" src="https://user-images.githubusercontent.com/62961139/140666314-fb8633bc-d383-4994-a123-3d44222fc9d9.png">
 
 **Conclusion:** 
